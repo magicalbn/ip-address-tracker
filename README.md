@@ -1,6 +1,6 @@
 # IP Address Tracker 
 
-## Hosted on Github Pages ==> https://magicalbn.github.io/ip-address-tracker/index.html
+## Hosted on Github Pages ==> https://magicalbn.github.io/ip-address-tracker
 
 HTML, SCSS, JS 
 
