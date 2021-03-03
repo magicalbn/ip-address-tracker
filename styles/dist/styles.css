@@ -212,6 +212,7 @@
   .section form input {
     width: 250px;
     font-size: 13px;
+    padding-left: 12px;
   }
   .section form button {
     background-size: 20%;
