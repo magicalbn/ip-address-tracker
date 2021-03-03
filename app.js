@@ -1,13 +1,23 @@
 
 
 const form = document.querySelector('#ipForm');
+const button = document.querySelector('#submit-btn');
 const ipAddress = document.querySelector('#ipAdrress');
 const error = document.querySelector('#error');
+const loader = document.querySelector('#loader');
+
 
 const ipvalue = document.querySelector("#ipvalue");
 const locationvalue = document.querySelector("#locationvalue");
 const timezonevalue = document.querySelector("#timezonevalue");
 const ispvalue = document.querySelector("#ispvalue");
+
+const toggleForm = () => {
+    form.classList.toggle("disabled");
+    loader.classList.toggle("loader");
+   
+}
+
 
 
 
@@ -61,21 +71,22 @@ const setMapView = (data) => {
     }
 
     populateDetails(data)
+    toggleForm();
     mymap.flyTo(coordinates, 16, { duration: 4.0, noStartMove: true })
 
-   
 
-  
+
+
 
     var myIcon = L.icon({
         iconUrl: './images/icon-location.svg',
         iconSize: [22, 35],
         iconAnchor: [11, 35],
         popupAnchor: [-3, -76],
-      
+
     });
-    
-    L.marker(coordinates, {icon: myIcon}).addTo(mymap);
+
+    L.marker(coordinates, { icon: myIcon }).addTo(mymap);
 
 
 }
@@ -83,9 +94,10 @@ const setMapView = (data) => {
 
 //get client location
 const getClientIpAddress = () => {
+    toggleForm()
     axios.get('https://geo.ipify.org/api/v1?apiKey=at_KSeo0bEwxSxOo5o7HJTuKW3zuxRMB')
         .then(response => {
-          //  console.log(response.data)
+            //  console.log(response.data)
 
             setMapView(response.data)
         })
@@ -106,6 +118,7 @@ const ValidateIPaddress = (ipaddress) => {
 //form submit event
 form.addEventListener('submit', event => {
     event.preventDefault();
+    toggleForm();
     error.style.display = "none"
     error.innerHTML = null;
 
@@ -118,7 +131,7 @@ form.addEventListener('submit', event => {
     }
     axios.get(`https://geo.ipify.org/api/v1?apiKey=at_KSeo0bEwxSxOo5o7HJTuKW3zuxRMB&${append}`)
         .then(response => {
-           // console.log(response.data)
+            // console.log(response.data)
 
             setMapView(response.data)
         }).catch(err => {
@@ -130,4 +143,4 @@ form.addEventListener('submit', event => {
 })
 
 
-getClientIpAddress()
+//getClientIpAddress()
