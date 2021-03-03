@@ -100,6 +100,14 @@ const getClientIpAddress = () => {
             //  console.log(response.data)
 
             setMapView(response.data)
+        }).catch(err => {
+           
+            error.style.display = "block"
+            if (err.response)
+            error.innerHTML = err.response.data.messages 
+            else
+            error.innerHTML = err
+            toggleForm();
         })
 }
 
@@ -135,12 +143,16 @@ form.addEventListener('submit', event => {
 
             setMapView(response.data)
         }).catch(err => {
-            console.log(err.response)
+            
             error.style.display = "block"
-            error.innerHTML = err.response.data.messages;
+            if (err.response)
+            error.innerHTML = err.response.data.messages 
+            else
+            error.innerHTML = err
+            toggleForm();
         })
 
 })
 
 
-//getClientIpAddress()
+getClientIpAddress()

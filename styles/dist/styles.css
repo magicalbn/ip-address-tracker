@@ -54,6 +54,7 @@
   border: none;
   outline: none;
   padding-left: 20px;
+  font-weight: 500;
 }
 
 .section form button {
@@ -139,74 +140,6 @@
       align-self: center;
 }
 
-@media only screen and (max-width: 1000px) {
-  .section .details {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 90%;
-  }
-  .section .details > div .head {
-    font-size: 10px;
-  }
-  .section .details > div .value {
-    font-size: 15px;
-  }
-  .section #error {
-    padding: 5px;
-    background-color: #e64545;
-    border-radius: 10px;
-    width: 200px;
-    position: fixed;
-    bottom: 50px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    display: none;
-    z-index: 4;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  body {
-    min-height: 750px;
-  }
-  .section form input {
-    width: 250px;
-    font-size: 17px;
-  }
-  .section form button {
-    background-size: 20%;
-  }
-  .section .details {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 60%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: auto;
-    text-align: center;
-    padding: 25px;
-    border-radius: 10px;
-  }
-  .section .details > div {
-    margin: auto;
-  }
-  .section .details > div .head {
-    font-size: 10px;
-  }
-  .section .details > div .value {
-    font-size: 15px;
-    margin: 3px 0;
-  }
-  .section .details > div:not(:last-child) {
-    margin-bottom: 15px;
-  }
-}
-
 .loader {
   position: absolute;
   border: 4px solid #f3f3f3;
@@ -241,6 +174,89 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .section .details {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 90%;
+  }
+  .section .details > div .head {
+    font-size: 10px;
+  }
+  .section .details > div .value {
+    font-size: 15px;
+  }
+  .section #error {
+    padding: 5px;
+    background-color: #e64545;
+    border-radius: 10px;
+    width: 200px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: none;
+    z-index: 4;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    min-height: 750px;
+  }
+  .section form input {
+    width: 250px;
+    font-size: 13px;
+  }
+  .section form button {
+    background-size: 20%;
+  }
+  .section .details {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 60%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+  }
+  .section .details > div {
+    margin: auto;
+  }
+  .section .details > div .head {
+    font-size: 10px;
+  }
+  .section .details > div .value {
+    font-size: 15px;
+    margin: 3px 0;
+  }
+  .section .details > div:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .loader {
+    position: absolute;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid black;
+    width: 15px;
+    height: 15px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    left: 33%;
+    bottom: 33%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
   }
 }
 
