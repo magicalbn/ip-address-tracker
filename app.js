@@ -68,7 +68,7 @@ const setMapView = (data) => {
   
 
     var myIcon = L.icon({
-        iconUrl: '/images/icon-location.svg',
+        iconUrl: './images/icon-location.svg',
         iconSize: [22, 35],
         iconAnchor: [11, 35],
         popupAnchor: [-3, -76],
