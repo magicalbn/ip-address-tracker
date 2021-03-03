@@ -1,3 +1,17 @@
+# IP Address Tracker 
+
+## Hosted on Github Pages ==> https://magicalbn.github.io/ip-address-tracker/index.html
+
+HTML, SCSS, JS 
+
+Interactive Map: https://leafletjs.com/reference-1.7.1.html#map-methods-for-modifying-map-state
+
+API used 
+
+Map Tiles: https://docs.mapbox.com/api/maps/static-tiles/
+
+IP Address: https://geo.ipify.org/
+
 # Frontend Mentor - IP Address Tracker
 
 ![Design preview for the IP Address Tracker coding challenge](./design/desktop-preview.jpg)
