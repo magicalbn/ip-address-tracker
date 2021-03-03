@@ -1,0 +1,203 @@
+#mapid {
+  height: 65%;
+  z-index: 2;
+}
+
+.section {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 35%;
+  background-image: url("/images/pattern-bg.png");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+}
+
+.section h2 {
+  font-size: 26px;
+}
+
+.section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.section form input {
+  width: 500px;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+
+.section form button {
+  background-color: black;
+  background-image: url(/images/icon-arrow.svg);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 45px;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.section form button:hover {
+  background-color: #242323;
+}
+
+.section .details {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 150px;
+  width: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  z-index: 5;
+  border-radius: 30px;
+  text-align: left;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.section .details > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 30px;
+}
+
+.section .details > div .head {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #969696;
+  font-weight: 500;
+}
+
+.section .details > div .value {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.section .details .divider {
+  display: block;
+  background-color: #969696;
+  width: 1px;
+  height: 70%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .section .details {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 90%;
+  }
+  .section .details > div .head {
+    font-size: 10px;
+  }
+  .section .details > div .value {
+    font-size: 15px;
+  }
+  .section #error {
+    padding: 5px;
+    background-color: #e64545;
+    border-radius: 10px;
+    width: 200px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: none;
+    z-index: 4;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    min-height: 750px;
+  }
+  .section form input {
+    width: 250px;
+    font-size: 17px;
+  }
+  .section form button {
+    background-size: 20%;
+  }
+  .section .details {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 60%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+  }
+  .section .details > div {
+    margin: auto;
+  }
+  .section .details > div .head {
+    font-size: 10px;
+  }
+  .section .details > div .value {
+    font-size: 15px;
+    margin: 3px 0;
+  }
+  .section .details > div:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+* {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 750px;
+  height: 100vh;
+}
+/*# sourceMappingURL=styles.css.map */
