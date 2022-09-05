@@ -95,7 +95,7 @@ const setMapView = (data) => {
 //get client location
 const getClientIpAddress = () => {
     toggleForm()
-    axios.get('https://geo.ipify.org/api/v1?apiKey=at_KSeo0bEwxSxOo5o7HJTuKW3zuxRMB')
+    axios.get('https://geo.ipify.org/api/v1?apiKey=at_1LgnZ09SIQcC97fAsWjFfurNluF3f')
         .then(response => {
             //  console.log(response.data)
 
@@ -137,7 +137,7 @@ form.addEventListener('submit', event => {
     if (!isIP) {
         append = `domain=${ipAddress.value}`
     }
-    axios.get(`https://geo.ipify.org/api/v1?apiKey=at_KSeo0bEwxSxOo5o7HJTuKW3zuxRMB&${append}`)
+    axios.get(`https://geo.ipify.org/api/v1?apiKey=at_1LgnZ09SIQcC97fAsWjFfurNluF3f&${append}`)
         .then(response => {
             // console.log(response.data)
 
